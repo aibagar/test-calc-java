@@ -233,13 +233,20 @@ public class App {
                     break;
                 default:
                     System.out.println("Операция не распознана.");
+                    System.exit(0);
             }
 
             if (valid == false) {
 
                 System.out.println("Результат = " + result);
             } else {
-                System.out.println("Результат = " + rome[result]);
+                if (result > 0) {
+                    System.out.println("Результат = " + rome[result]);
+                } else {
+                    System.out
+                            .println("Результат в Римской системе исчисления не может быть нулевым или отрицательным!");
+                    System.exit(0);
+                }
             }
         }
     }
